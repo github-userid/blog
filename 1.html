@@ -1,0 +1,61 @@
+<!DOCPYTE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>年华-1</title> 
+		<link rel="stylesheet" type="text/css" href="default.css">
+	</head>
+	<body  >
+		<div id="container" class="container">
+			<div id="header" class="header">
+				<h1 >
+				<a href="index.html">叹年华 千里梦沉</a>
+				</h1>
+			</div>
+			<div id="content" class="menu-content">
+			
+<pre>
+念奴娇·赤壁怀古
+
+苏轼·宋
+
+大江东去，浪淘尽，千古风流人物。
+
+故垒西边，人道是，三国周郎赤壁。
+
+乱石穿空，惊涛拍岸，卷起千堆雪。
+
+江山如画，一时多少豪杰。
+
+遥想公瑾当年，小乔初嫁了，雄姿英发。
+
+羽扇纶巾，谈笑间，樯橹灰飞烟灭。
+
+故国神游，多情应笑我，早生华发。
+
+人生如梦，一尊还酹江月。 
+</pre>
+			</div>
+			
+			<div id="footer" class="footer" >
+				<div id="pages" class="pages"><a href="menu.html">目录		</a></div>
+				<script language="javascript">
+					var obj = document.getElementById("content");
+					var pages = document.getElementById("pages");
+					window.onload = function(){
+						var allpages = Math.ceil(parseInt(obj.scrollHeight)/parseInt(obj.offsetHeight));
+						pages.innerHTML += "<a>共"+allpages+"页：</a> ";
+						for (var i=1;i<=allpages;i++){
+							pages.innerHTML += "<a href=\"javascript:showpart('"+i+"');\">"+i+"</a> ";
+						}
+					}
+					function showpart(x){
+						obj.scrollTop=(x-1)*parseInt(obj.offsetHeight);
+					}
+				</script>
+				<br>
+				Copyright © livemylife.club 
+			</div>
+		</div>
+	</body>
+</html>
